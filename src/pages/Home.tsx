@@ -167,7 +167,7 @@ const WhyChooseUs = () => (
           { icon: <Heart className="w-8 h-8" />, title: "Destination Weddings", desc: "Complete end-to-end management for stunning beachfront weddings, from decor and catering to guest accommodation." },
           { icon: <Clock className="w-8 h-8" />, title: "Corporate Event MICE", desc: "Extensive MICE services: corporate offsites, team building exercises, and executive retreats in premium Goan properties." },
           { icon: <Award className="w-8 h-8" />, title: "Local Goan Experts", desc: "We are proudly Goan. Nobody understands the local vibes, cuisine, and secret locations better than our team." }
-        ]].map((item, i) => (
+        ].map((item, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
