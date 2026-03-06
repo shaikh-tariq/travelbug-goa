@@ -56,8 +56,8 @@ const Navbar = () => {
 
   return (
     <nav aria-label="Main navigation" className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4 flex justify-between items-center ${navBgClass}`}>
-      <Link to="/" aria-label="Explorateur Travel - Home" className={`text-2xl font-serif font-bold tracking-tighter uppercase transition-colors ${navColorClass}`}>
-        Explorateur
+      <Link to="/" aria-label="TravelBug Goa - Home" className="flex items-center gap-2">
+        <img src="https://logo.clearbit.com/thetravelbug.co.in" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.style.display='none'; e.currentTarget.nextSibling.style.display='block'; }} alt="TravelBug Goa Logo" className="h-8 md:h-12 object-contain" /><span className="text-2xl font-serif font-bold tracking-tighter uppercase transition-colors" style={{display: 'none'}}>TravelBug Goa</span>
       </Link>
 
       <div className={`hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[10px] uppercase tracking-[0.2em] font-display font-bold ${isScrolled || !isHome ? "text-ink/60" : "text-white/70"}`}>
