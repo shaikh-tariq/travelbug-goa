@@ -105,15 +105,9 @@ const Hero = () => {
           </span>
         </div>
 
-        <h1 className="text-6xl md:text-8xl text-white mb-6 leading-[0.9]">
-          Your Journey, <br />
-          <span className="font-script text-accent italic">Our Responsibility</span>
-        </h1>
+        <h1 className="text-6xl md:text-8xl text-white mb-6 leading-[0.9]">TravelBug Goa <br /> <span className="font-script text-accent italic">The Goan Vibe</span></h1>
 
-        <p className="text-white/90 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto tracking-wide">
-          Handcrafted itineraries. Verified local guides. <br className="hidden md:block" />
-          No hidden charges. Just unforgettable experiences.
-        </p>
+        <p className="text-white/90 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto tracking-wide">Curated Goa sightseeing tours, sunset boat cruises, and thrilling Mandovi river watersports. Let our local experts coordinate your perfect Goan corporate event or destination wedding.</p>
 
         <div className="glass-card p-2 md:p-4 max-w-5xl mx-auto flex flex-col md:flex-row gap-4 items-center shadow-2xl">
           <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-2">
@@ -162,42 +156,18 @@ const WhyChooseUs = () => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <span className="text-[11px] uppercase tracking-[0.3em] font-display font-bold text-accent mb-4 block">Why Travelers Trust Us</span>
-        <h2 className="text-5xl md:text-6xl">Your trip, done right</h2>
+        <h2 className="text-5xl md:text-6xl">The Ultimate Goan Experience</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          {
-            icon: <Shield className="w-8 h-8" />,
-            title: "No Hidden Charges",
-            desc: "Transparent pricing from day one. The price we quote is the price you pay — no surprise fees, no last-minute add-ons."
-          },
-          {
-            icon: <Headphones className="w-8 h-8" />,
-            title: "24/7 On-Trip Support",
-            desc: "Our dedicated travel desk is available round the clock while you're traveling. One call and we handle everything."
-          },
-          {
-            icon: <CheckCircle className="w-8 h-8" />,
-            title: "Verified Local Partners",
-            desc: "Every hotel, guide, and driver in our network is personally vetted. We only work with the best on the ground."
-          },
-          {
-            icon: <Heart className="w-8 h-8" />,
-            title: "Customized Itineraries",
-            desc: "No cookie-cutter tours. Every trip is personally designed around your interests, pace, and budget."
-          },
-          {
-            icon: <Clock className="w-8 h-8" />,
-            title: "Flexible Payment Options",
-            desc: "Book with a small deposit and pay the rest later. We offer EMI options and accept all major payment methods."
-          },
-          {
-            icon: <Award className="w-8 h-8" />,
-            title: "Govt. Approved Operator",
-            desc: "We are a registered and Ministry of Tourism approved tour operator with 10+ years of trusted operations."
-          }
-        ].map((item, i) => (
+          { icon: <Shield className="w-8 h-8" />, title: "Authentic Sightseeing", desc: "Explore hidden waterfalls, heritage Portuguese churches, and pristine off-the-beaten-path beaches of South Goa." },
+          { icon: <Headphones className="w-8 h-8" />, title: "Luxury Boat Cruises", desc: "Unforgettable Mandovi river sunset cruises, casino trips, and private yacht charters for special occasions." },
+          { icon: <CheckCircle className="w-8 h-8" />, title: "Thrilling Watersports", desc: "Safe, action-packed parasailing, jet skiing, banana rides, and scuba diving packages across North Goa beaches." },
+          { icon: <Heart className="w-8 h-8" />, title: "Destination Weddings", desc: "Complete end-to-end management for stunning beachfront weddings, from decor and catering to guest accommodation." },
+          { icon: <Clock className="w-8 h-8" />, title: "Corporate Event MICE", desc: "Extensive MICE services: corporate offsites, team building exercises, and executive retreats in premium Goan properties." },
+          { icon: <Award className="w-8 h-8" />, title: "Local Goan Experts", desc: "We are proudly Goan. Nobody understands the local vibes, cuisine, and secret locations better than our team." }
+        ]].map((item, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
