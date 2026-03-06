@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-paper: #FFF5F3;
+  --color-accent: #DC2626;
+  --color-olive: #9B4E4E;
+  --color-ink: #2A0A08;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+
+  /* Focus-visible: accessible keyboard focus rings */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  /* Remove default outline only when NOT keyboard-navigating */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip to main content link for keyboard users */
+.skip-link {
+  @apply absolute -top-full left-4 z-[100] bg-accent text-white px-6 py-3 rounded-b-xl font-display text-sm font-bold uppercase tracking-widest;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Custom script-like font feel using Playfair Italic as fallback for Sebastian Bobby */
+.font-script {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+}
+
+.btn-primary {
+  @apply bg-ink text-paper px-8 py-3 rounded-full uppercase tracking-widest font-display text-xs font-semibold transition-all hover:bg-accent hover:scale-105 active:scale-95 cursor-pointer;
+}
+
+.btn-outline {
+  @apply border-2 border-ink text-ink px-8 py-3 rounded-full uppercase tracking-widest font-display text-xs font-semibold transition-all hover:bg-ink hover:text-paper cursor-pointer;
+}
